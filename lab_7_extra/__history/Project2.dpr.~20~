@@ -1,0 +1,23 @@
+program Project2;
+
+uses
+  System.SysUtils;
+
+var
+  f: TextFile;
+  s: String;
+
+begin
+  writeln(paramstr(0));
+  readln;
+  AssignFile(f, '..\lab_7_extra\myText.txt');
+  Reset(f);
+  while not Eof(f) do
+  begin
+    readln(f, s);
+    writeln(s);
+
+  end;
+  readln;
+
+end.

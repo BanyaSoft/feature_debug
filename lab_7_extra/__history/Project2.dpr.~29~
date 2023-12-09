@@ -1,0 +1,31 @@
+program Project2;
+
+uses
+  System.SysUtils;
+
+var
+  f: TextFile;
+  s, sumStr: String;
+  arrString: array of string;
+
+begin
+  sumStr := '';
+  AssignFile(f, 'myText.txt');
+  Reset(f);
+  while not Eof(f) do
+  begin
+    readln(f, s);
+    sumStr := sumStr + s;
+  end;
+  for s in sumStr do
+    if s <> '$' then
+      write(s)
+    else
+      writeln();
+
+  // writeln(sumStr);
+  CloseFile(f);
+
+  readln;
+
+end.
