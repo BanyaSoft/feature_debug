@@ -9,7 +9,7 @@ uses
 type
   TSetOfWords = array [1 .. 8] of string;
 
-function IsValid1(stageStr, userStr: string): boolean;
+function IsValidS1(stageStr, userStr: string): boolean;
 begin
   stageStr := ReverseString(stageStr);
   if stageStr = userStr then
@@ -61,7 +61,6 @@ end;
 
 function IsValidS4(stageArr: TSetOfWords; numOfWords: Byte;
   userStr: string): boolean;
-// для этапа 1 тоже можно применить. numOfWords будет равно 1. В массиве только 1 элемент
 const
   space = ' ';
 var
