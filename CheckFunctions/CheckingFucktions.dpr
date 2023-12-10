@@ -52,7 +52,7 @@ const
 var
   checkString: string;
 begin
-  checkString := String.Join(space, stageArr, 1, numOfWords);
+  checkString := String.Join(space, stageArr, 0, numOfWords);
   if checkString = userStr then
     Result := True
   else
@@ -97,15 +97,8 @@ var
   i: integer;
   temp, checkString: string;
 begin
-  for i := 1 to ((numOfWords + 1) div 2) do
-  begin
-    temp := stageArr[i];
-    stageArr[i] := stageArr[numOfWords - i + 1];
-    stageArr[numOfWords - i + 1] := temp;
-  end;
-  for i := 1 to numOfWords do
-    stageArr[i] := ReverseString(stageArr[i]);
-  checkString := String.Join(space, stageArr, 1, numOfWords);
+  checkString := String.Join(space, stageArr, 0, numOfWords);
+  checkString := ReverseString(checkString);
   if checkString = userStr then
     Result := True
   else
