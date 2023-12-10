@@ -20,7 +20,7 @@ var
   s: string;
 
 begin
-  s := 'Gfh hf      fhj';
+  s := 'UpperCase is the hardest task ever';
   TrimString(s);
   writeln(s);
   s := '        Gfh hf a a  a  a a      fhj   ';
