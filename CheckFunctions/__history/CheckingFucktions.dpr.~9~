@@ -59,6 +59,7 @@ begin
 end;
 
 function IsValidS4(stageArr: TSetOfWords; numOfWords: Byte;
+  // для этапа 1 тоже можно применить. numOfWords будет равно 1. В массиве только 1 элемент
   userStr: string): boolean;
 var
   i: Byte;
