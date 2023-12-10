@@ -1,31 +1,41 @@
-program Project2;
+﻿program Project2;
+
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils, System.StrUtils;
 
 function IsValid(var checkStr: string): byte;
 var
   i, number: integer;
   flag: boolean;
+  value: byte;
 begin
   flag := true;
-  if length(checkStr) = 0 then
-    IsValid := $01
+  value := $00;
+  if Length(checkStr) = 0 then
+    value := $01
   else
   begin
-    for i := 1 to length(checkStr) do
+    for i := 1 to Length(checkStr) do
     begin
       number := Ord(checkStr[i]);
       if (number < 1040) or (number > 1071) then
         flag := false;
     end;
     if not flag then
-      IsValid := $10
+      value := $10
     else
-      IsValid := $00;
-  end
+      value := $00;
+  end;
+  Result := value;
 end;
 
 var
   test: integer;
   testStr: string;
+
 begin
   readln(testStr);
   test := IsValid(testStr);
