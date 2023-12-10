@@ -6,7 +6,7 @@
 uses
   System.SysUtils, System.StrUtils;
 
-function IsValid(var checkStr: string): byte;
+function IsValid(checkStr: string): byte;
 var
   i, number: integer;
   flag: boolean;
