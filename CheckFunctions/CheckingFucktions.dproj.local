@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899/12/30 00:00:00.000.729,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.271,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\CheckingFucktions.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.055,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.892,G:\DelphiWorks\CheckingFucktions.dproj=G:\DelphiWorks\CheckingFucktions.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.730,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.407,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.271,G:\DelphiWorks\CheckingFucktions.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.892,G:\DelphiWorks\CheckingFucktions.dproj=G:\DelphiWorks\CheckingFucktions.dproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.729,G:\DelphiWorks\Project22.dproj=G:\DelphiWorks\Project22.dproj</Transaction>
   </Transactions>
 </BorlandProject>
