@@ -21,7 +21,7 @@ begin
     for i := 1 to Length(checkStr) do
     begin
       number := Ord(checkStr[i]);
-      if (number < 1040) or (number > 1071) then
+      if not ((number >= 1040) or (number <= 1071) or (number = 32)) then
         flag := false;
     end;
     if not flag then
