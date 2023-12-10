@@ -1,0 +1,136 @@
+﻿program CheckingFucktions;
+
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  TSetOfWords = array [1 .. 8] of string;
+
+function ReverseStr(str: string): string;
+var
+  reversedStr: string;
+  i: integer;
+begin
+  setlength(reversedStr, length(str));
+  for i := 1 to length(str) do
+    reversedStr[i] := str[length(str) - i + 1];
+  Result := reversedStr;
+end;
+
+function ConcatArr(stageArr: TSetOfWords; numOfWords: Byte): string;
+var
+  str: string;
+  i: integer;
+const
+  space = ' ';
+begin
+  str := '';
+  for i := 1 to numOfWords do
+    str := concat(str, stageArr[i], space);
+  str := Trim(str);
+  Result := str;
+end;
+
+function IsValid1(stage1Str, userStr: string): boolean;
+begin
+  stage1Str := ReverseStr(stage1Str);
+  if stage1Str = userStr then
+    Result := true
+  else
+    Result := false;
+end;
+
+function IsValidS2(stage2Arr: TSetOfWords; numOfWords: Byte; userStr: string)
+  : boolean; // Всю эту функцию можно впендюрить в функцию IsValidS4
+var
+  checkWord: string;
+  i: Byte;
+  flag: boolean;
+const
+  space = ' ';
+begin
+  flag := true;
+  userStr := concat(space, userStr, space);
+  for i := 1 to numOfWords do
+  begin
+    checkWord := stage2Arr[i];
+    checkWord := concat(space, checkWord, space);
+    if pos(checkWord, userStr) = 0 then
+    begin
+      flag := false;
+      break;
+    end
+    else
+      Delete(userStr, pos(checkWord, userStr), length(checkWord) - 1);
+  end;
+  Result := flag;
+end;
+
+function IsValidS3(stage3Arr: TSetOfWords; numOfWords: Byte;
+  userStr: string): boolean;
+var
+  checkString: string;
+begin
+  checkString := ConcatArr(stage3Arr, numOfWords);
+  if checkString = userStr then
+    Result := true
+  else
+    Result := false;
+end;
+
+function IsValidS4(stage4Arr: TSetOfWords; numOfWords: Byte;
+  // для этапа 1 тоже можно применить. numOfWords будет равно 1. В массиве только 1 элемент
+  userStr: string): boolean;
+var
+  i: Byte;
+  checkWord: string;
+  flag: boolean;
+const
+  space = ' ';
+begin
+  for i := 1 to numOfWords do
+    stage4Arr[i] := ReverseStr(stage4Arr[i]);
+  userStr := concat(space, userStr, space);
+  flag := true;
+  userStr := concat(space, userStr, space);
+  for i := 1 to numOfWords do
+  begin
+    checkWord := stage4Arr[i];
+    checkWord := concat(space, checkWord, space);
+    if pos(checkWord, userStr) = 0 then
+    begin
+      flag := false;
+      break;
+    end
+    else
+      Delete(userStr, pos(checkWord, userStr), length(checkWord) - 1);
+  end;
+  Result := flag;
+end;
+
+function IsValidS5(stageArr: TSetOfWords; numOfWords: Byte;
+  userStr: string): boolean;
+var
+  i: integer;
+  temp, checkString: string;
+  flag: boolean;
+begin
+  for i := 1 to ((numOfWords + 1) shr 1) do
+  begin
+    temp := stageArr[i];
+    stageArr[i] := stageArr[numOfWords - i + 1];
+    stageArr[numOfWords - i + 1] := temp;
+  end;
+  for i := 1 to numOfWords do
+    stageArr[i] := ReverseStr(stageArr[i]);
+  checkString := ConcatArr(stageArr, numOfWords);
+  if checkString = userStr then
+    Result := true
+  else
+    Result := false;
+end;
+
+end.
