@@ -15,6 +15,7 @@ var
   arrTemp: TSetOfWords;
   rIndex: word;
 begin
+  Randomize;
   for var i := 1 to 8 do
     arrTemp[i] := '';
   for var j := 1 to numberOfWords do
