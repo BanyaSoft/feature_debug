@@ -231,7 +231,7 @@ begin
       writeln('Этап 1. Уровень ', level);
       writeln(stageStr);
       sleep(3000);
-      ClearScreen();
+      //ClearScreen();
 
       writeln('Этап 1. Уровень ', level, #13#10, 'Введите перевёрнутое слово:');
 
@@ -294,7 +294,7 @@ begin
         write(' ', stageArr[i]);
       writeln;
       sleep(5000);
-      ClearScreen();
+      //ClearScreen();
 
       writeln('Этап 2. Уровень ', level, #13#10,
         'Введите словa в любом порядке:');
@@ -359,7 +359,7 @@ begin
         write(' ', stageArr[i]);
       writeln;
       sleep(5000);
-      ClearScreen();
+      //ClearScreen();
 
       writeln('Этап 3. Уровень ', level, #13#10,
         'Введите словa в строгом порядке:');
@@ -424,7 +424,7 @@ begin
         write(' ', stageArr[i]);
       writeln;
       sleep(5000);
-      ClearScreen();
+      //ClearScreen();
 
       writeln('Этап 4. Уровень ', level, #13#10,
         'Введите перевёрнутые словa в любом порядке:');
@@ -489,7 +489,7 @@ begin
         write(' ', stageArr[i]);
       writeln;
       sleep(5000);
-      ClearScreen();
+      //ClearScreen();
 
       writeln('Этап 5. Уровень ', level, #13#10,
         'Введите предложение в обратном порядке:');
