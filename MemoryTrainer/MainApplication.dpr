@@ -440,11 +440,13 @@ begin
         begin
             stageStr := words[level][random(Length(words[level]))];
 
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
             writeln(stageStr);
-            Sleep(sleepTime);
+            //Sleep(sleepTime);
+            writeln('Debug: Press Enter to continue');
+            readln;
             ClearScreen(True);
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
 
             writeln('Введите перевёрнутое слово:');
 
@@ -534,14 +536,16 @@ begin
         begin
             stageArr := RandomArr(words, level + 4);
 
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
             write(stageArr[1]);
             for var i := 2 to level + 4 do
                 write(' ', stageArr[i]);
             writeln;
-            Sleep(sleepTime);
+            //Sleep(sleepTime);
+            writeln('Debug: Press Enter to continue');
+            readln;
             ClearScreen(True);
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
 
             writeln('Введите словa в любом порядке:');
 
@@ -630,14 +634,16 @@ begin
         begin
             stageArr := RandomArr(words, level + 4);
 
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
             write(stageArr[1]);
             for var i := 2 to level + 4 do
                 write(' ', stageArr[i]);
             writeln;
-            Sleep(sleepTime);
+            //Sleep(sleepTime);
+            writeln('Debug: Press Enter to continue');
+            readln;
             ClearScreen(True);
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
 
             writeln('Введите словa в строгом порядке:');
 
@@ -727,14 +733,16 @@ begin
         begin
             stageArr := RandomArr(words, level + 4);
 
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
             write(stageArr[1]);
             for var i := 2 to level + 4 do
                 write(' ', stageArr[i]);
             writeln;
-            Sleep(sleepTime);
+            //Sleep(sleepTime);
+            writeln('Debug: Press Enter to continue');
+            readln;
             ClearScreen(True);
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
 
             writeln('Введите предложение в обратном порядке:');
 
@@ -824,14 +832,16 @@ begin
         begin
             stageArr := RandomArr(words, level + 4);
 
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
             write(stageArr[1]);
             for var i := 2 to level + 4 do
                 write(' ', stageArr[i]);
             writeln;
-            Sleep(sleepTime);
+            //Sleep(sleepTime);
+            writeln('Debug: Press Enter to continue');
+            readln;
             ClearScreen(True);
-            SwitchConsoleMode;
+            //SwitchConsoleMode;
 
             writeln('Введите перевёрнутые словa в любом порядке:');
 
